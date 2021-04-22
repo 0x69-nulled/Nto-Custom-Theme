@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Custom Nulled Theme
 // @namespace    Nulled
-// @version      1.3.03
+// @version      1.3.04
 // @description  Custom Theme for Nulled.to
 // @Author       0x69
 // @include      *nulled.to*
@@ -423,29 +423,7 @@ window.onload = () => {
 
            removeElement.appendChild(userUL);
         }
-    } else if (window.location.pathname.toLowerCase() == '/credits.php' && window.location.search.toLowerCase() == '?action=items') {
-        let ownedItemsDiv = document.querySelector('#credits_content > div > div:last-child');
-        let itemsDiv = ownedItemsDiv.querySelector('.infoBox');
-        let text = document.createElement('p');
-        text.textContent = "Url to custom Item (.png / .jpg / .jpeg / .gif): ";
-        let urlInput = document.createElement('input');
-        let submitButton = document.createElement('button');
-        let currentItem = document.createElement('img');
-        currentItem.src = GM_getValue("linkCustomItem");
-        currentItem.classList.add('itemDisplay');
-        submitButton.textContent = "Set";
-        itemsDiv.textContent = "";
-        itemsDiv.insertBefore(urlInput, itemsDiv.firstChild);
-        itemsDiv.insertBefore(text, itemsDiv.firstChild);
-        itemsDiv.append(submitButton);
-        itemsDiv.insertBefore(currentItem, itemsDiv.firstChild);
-
-        submitButton.onclick = () => {
-            GM_setValue("linkCustomItem", urlInput.value);
-            currentItem.src = urlInput.value;
-        }
     }
-
 
     // Function I stole from https://developer.mozilla.org/
     function notifyMe(user, message) {
