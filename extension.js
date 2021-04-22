@@ -108,10 +108,6 @@ GM_addStyle(`
         margin: 2em;
     }
 
-    .cell-message.item-sb-img {
-        display: inline
-    }
-
 `);
 
 // set items css
