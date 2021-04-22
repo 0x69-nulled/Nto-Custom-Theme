@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Custom Nulled Theme
 // @namespace    Nulled
-// @version      1.3.00
+// @version      1.3.01
 // @description  Custom Theme for Nulled.to
 // @Author       0x69
 // @include      *nulled.to*
