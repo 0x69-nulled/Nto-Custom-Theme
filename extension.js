@@ -1,3 +1,19 @@
+// ==UserScript==
+// @name         Custom Nulled Theme
+// @namespace    Nulled
+// @version      1.2.00
+// @description  Custom Theme for Nulled.to
+// @Author       0x69
+// @include      *nulled.to*
+// @match        https://www.nulled.to/
+// @require      https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js
+// @updateURL	 https://raw.githubusercontent.com/0x69-nulled/Nto-Custom-Theme/main/extension.js
+// @downloadURL  https://raw.githubusercontent.com/0x69-nulled/Nto-Custom-Theme/main/extension.js
+// @grant        GM_addStyle
+// @grant        GM_setValue
+// @grant        GM_getValue
+// @run-at       document-start
+// ==/UserScript==
 
 const socket = io.connect("https://chat-ssl2.nulled.to:443", {forceNew: !0});
 
@@ -483,7 +499,7 @@ const getItemsCSS = ( items ) => {
 
     if (items == 0) return;
     let customItem = document.createElement('style');
-    
+
     for (let i = 0; i < 2; i++) {
         console.log(items)
         customItem.appendChild(document.createTextNode(`
