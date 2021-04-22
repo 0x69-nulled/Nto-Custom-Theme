@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Custom Nulled Theme
 // @namespace    Nulled
-// @version      1.3.04
+// @version      1.3.05
 // @description  Custom Theme for Nulled.to
 // @Author       0x69
 // @include      *nulled.to*
@@ -67,27 +67,7 @@ GM_addStyle(`
         color: ${newColors.banned} !important;
     }
     .sixYears {
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: #ff0000;
-        font-weight: bolder;
-        text-shadow: 0px 0px 5px #00FF00;
-        background-image: linear-gradient(60deg, #00fff7 0%, #91ff00 100%, #fff);
-        background-size: cover;
-        animation: sixYearAnim 5s infinite;
-    }
-    @keyframes sixYearAnim {
-        0% {
-            filter: hue-rotate(-80deg);
-        }
-
-        50% {
-            filter: hue-rotate(175deg);
-        }
-
-        100% {
-            filter: hue-rotate(-80deg);
-        }
+        
     }
     .titleStyle {
         color: #000;
@@ -98,14 +78,6 @@ GM_addStyle(`
         background-color: red !important;
         color: yellow !important;
         content: "WARNING CORONA LINK";
-    }
-
-    .itemDisplay {
-        background-size: cover;
-        display: inline-block;
-        width: 14px;
-        height: 14px;
-        margin: 2em;
     }
 
 `);
