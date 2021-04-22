@@ -28,7 +28,6 @@ const newColors = {
 
 var userName;
 var uid;
-
 var customItemsCSS;
 
 // custom css
@@ -166,7 +165,7 @@ window.onload = () => {
         userName = userLink.href.replace(/.*-/g, "");
         uid = userLink.href.match(/nulled.to\/user\/(\d*)-/)[1];
     }
-    
+
     console.log({ "username": userName, "uid": uid });
 
     // enable top credit
@@ -498,10 +497,10 @@ window.onload = () => {
 
 const getItemsCSS = ( items ) => {
 
-    if (items == 0) return;
+    if (items.length == 0 || items == undefined) return;
     let customItem = document.createElement('style');
 
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < items.length; i++) {
         customItem.appendChild(document.createTextNode(`
         a[hovercard-id*="${items[i][0]}"]:after, a[href="/user/${items[i][0]}-"]:after {
             background-image: url('${items[i][1]}');
