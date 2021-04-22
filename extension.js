@@ -166,7 +166,8 @@ window.onload = () => {
         userName = userLink.href.replace(/.*-/g, "");
         uid = userLink.href.match(/nulled.to\/user\/(\d*)-/)[1];
     }
-    console.log(userName, uid);
+    
+    console.log({ "username": userName, "uid": uid });
 
     // enable top credit
     const ranking = document.querySelector("#index_stats > div.ipsBlockOuter.__xXblack20friday");
@@ -501,7 +502,6 @@ const getItemsCSS = ( items ) => {
     let customItem = document.createElement('style');
 
     for (let i = 0; i < 2; i++) {
-        console.log(items)
         customItem.appendChild(document.createTextNode(`
         a[hovercard-id*="${items[i][0]}"]:after, a[href="/user/${items[i][0]}-"]:after {
             background-image: url('${items[i][1]}');
