@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Custom Nulled Theme
 // @namespace    Nulled
-// @version      1.3.02
+// @version      1.3.03
 // @description  Custom Theme for Nulled.to
 // @Author       0x69
 // @include      *nulled.to*
@@ -106,6 +106,10 @@ GM_addStyle(`
         width: 14px;
         height: 14px;
         margin: 2em;
+    }
+
+    .cell-message.item-sb-img {
+        display: inline
     }
 
 `);
@@ -507,6 +511,7 @@ const getItemsCSS = ( items ) => {
             background-size: 14px 14px;
             margin-left: 5px;
             margin-top: -2px;
+            margin-right: 2px;
             vertical-align: middle;
             display: inline-block;
             width: 14px;
