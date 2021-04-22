@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Custom Nulled Theme
 // @namespace    Nulled
-// @version      1.3.05
+// @version      1.3.06
 // @description  Custom Theme for Nulled.to
 // @Author       0x69
 // @include      *nulled.to*
@@ -67,7 +67,7 @@ GM_addStyle(`
         color: ${newColors.banned} !important;
     }
     .sixYears {
-        
+
     }
     .titleStyle {
         color: #000;
@@ -257,7 +257,7 @@ window.onload = () => {
                 let tag = user.querySelector("div.user_details > div.postbit-info");
                 let text = tag.querySelector("span");
                 text.textContent = "SIX YEARS REGISTERED";
-                text.removeClassName("t");
+                // text.removeClassName("t");
                 text.addClassName("sixYears");
             }
         })
